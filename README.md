@@ -3,6 +3,8 @@
 Tmux command completion source for
 [blink.cmp](https://github.com/saghen/blink.cmp).
 
+<img width="1920" height="1200" alt="blink-cmp-tmux preview" src="https://github.com/user-attachments/assets/d7b0683b-6e00-4d75-a169-048bf4d80860" />
+
 ## Features
 
 - Completes tmux commands with full usage signatures
