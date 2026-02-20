@@ -19,8 +19,7 @@ Tmux command completion source for
 
 ## Installation
 
-Install via
-[luarocks](https://luarocks.org/modules/barrettruth/blink-cmp-tmux):
+Install via [luarocks](https://luarocks.org/modules/barrettruth/blink-cmp-tmux):
 
 ```
 luarocks install blink-cmp-tmux
