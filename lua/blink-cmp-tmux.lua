@@ -45,7 +45,7 @@ local function parse_descriptions()
     local j = def.line + 1
     while j <= block_end do
       local l = lines[j]
-      if l:match('^%s+%(alias:') then
+      if l:match('^%s+%(alias:') or vim.trim(l) == '' then
         j = j + 1
       elseif l:match('^               ') then
         local stripped = vim.trim(l)
@@ -54,8 +54,6 @@ local function parse_descriptions()
         else
           break
         end
-      elseif vim.trim(l) == '' then
-        j = j + 1
       else
         break
       end
@@ -84,7 +82,7 @@ local function parse_descriptions()
       end
     end
     local desc = table.concat(parts, '\n\n')
-    desc = desc:gsub('\xe2\x80\x90 ', '')
+    desc = desc:gsub(string.char(0xe2, 0x80, 0x90) .. ' ', '')
     desc = desc:gsub('  +', ' ')
     if desc ~= '' then
       descs[def.cmd] = desc
