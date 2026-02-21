@@ -26,37 +26,38 @@ local MAN_PAGE = table.concat({
 }, '\n')
 
 local function mock_system()
-  local original = vim.system
+  local original_system = vim.system
+  local original_schedule = vim.schedule
   ---@diagnostic disable-next-line: duplicate-set-field
-  vim.system = function(cmd)
+  vim.system = function(cmd, _, on_exit)
+    local result
     if cmd[1] == 'bash' then
-      return {
-        wait = function()
-          return { stdout = MAN_PAGE, code = 0 }
-        end,
-      }
+      result = { stdout = MAN_PAGE, code = 0 }
     elseif cmd[1] == 'tmux' and cmd[2] == 'list-commands' then
       if cmd[3] == '-F' then
-        return {
-          wait = function()
-            return { stdout = TMUX_NAMES, code = 0 }
-          end,
-        }
+        result = { stdout = TMUX_NAMES, code = 0 }
+      else
+        result = { stdout = TMUX_COMMANDS, code = 0 }
       end
-      return {
-        wait = function()
-          return { stdout = TMUX_COMMANDS, code = 0 }
-        end,
-      }
+    else
+      result = { stdout = '', code = 1 }
+    end
+    if on_exit then
+      on_exit(result)
+      return {}
     end
     return {
       wait = function()
-        return { stdout = '', code = 1 }
+        return result
       end,
     }
   end
+  vim.schedule = function(fn)
+    fn()
+  end
   return function()
-    vim.system = original
+    vim.system = original_system
+    vim.schedule = original_schedule
   end
 end
 
