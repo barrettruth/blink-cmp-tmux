@@ -3,7 +3,7 @@ default:
 
 format:
     stylua --check .
-    biome format biome.json .luarc.json
+    biome format .
 
 lint:
     git ls-files '*.lua' | xargs selene --display-style quiet
