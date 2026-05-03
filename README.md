@@ -31,7 +31,7 @@ Or with lazy.nvim:
 {
   'saghen/blink.cmp',
   dependencies = {
-    'barrettruth/blink-cmp-tmux',
+    { url = 'https://git.barrettruth.com/barrettruth/blink-cmp-tmux' },
   },
   opts = {
     sources = {

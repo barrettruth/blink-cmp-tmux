@@ -3,12 +3,12 @@ package = 'blink-cmp-tmux'
 version = 'scm-1'
 
 source = {
-  url = 'git+https://github.com/barrettruth/blink-cmp-tmux.git',
+  url = 'git+https://git.barrettruth.com/barrettruth/blink-cmp-tmux.git',
 }
 
 description = {
   summary = 'Tmux command completion source for blink.cmp',
-  homepage = 'https://github.com/barrettruth/blink-cmp-tmux',
+  homepage = 'https://git.barrettruth.com/barrettruth/blink-cmp-tmux',
   license = 'MIT',
 }
 
