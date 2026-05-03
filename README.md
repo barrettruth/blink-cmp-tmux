@@ -19,30 +19,32 @@ Tmux command completion source for
 
 ## Installation
 
-Install via [luarocks](https://luarocks.org/modules/barrettruth/blink-cmp-tmux):
+With `vim.pack` (Neovim 0.12+):
+
+```lua
+vim.pack.add({
+  'https://git.barrettruth.com/barrettruth/blink-cmp-tmux',
+})
+```
+
+Or via [luarocks](https://luarocks.org/modules/barrettruth/blink-cmp-tmux):
 
 ```
 luarocks install blink-cmp-tmux
 ```
 
-Or with lazy.nvim:
+Configure `blink.cmp`:
 
 ```lua
-{
-  'saghen/blink.cmp',
-  dependencies = {
-    { url = 'https://git.barrettruth.com/barrettruth/blink-cmp-tmux' },
-  },
-  opts = {
-    sources = {
-      default = { 'tmux' },
-      providers = {
-        tmux = {
-          name = 'Tmux',
-          module = 'blink-cmp-tmux',
-        },
+require('blink.cmp').setup({
+  sources = {
+    default = { 'tmux' },
+    providers = {
+      tmux = {
+        name = 'Tmux',
+        module = 'blink-cmp-tmux',
       },
     },
   },
-}
+})
 ```
