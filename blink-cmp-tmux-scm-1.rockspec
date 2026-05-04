@@ -9,7 +9,7 @@ source = {
 description = {
   summary = 'Tmux command completion source for blink.cmp',
   homepage = 'https://git.barrettruth.com/barrettruth/blink-cmp-tmux',
-  license = 'MIT',
+  license = 'GPL-3.0',
 }
 
 dependencies = {
