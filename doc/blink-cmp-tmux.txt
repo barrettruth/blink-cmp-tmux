@@ -1,0 +1,65 @@
+*blink-cmp-tmux.txt* Tmux command completion source for blink.cmp
+
+Author:  Barrett Ruth <br@barrettruth.com> License: GPL-3.0
+
+==============================================================================
+CONTENTS                                             *blink-cmp-tmux-contents*
+
+  1. Introduction .................................... |blink-cmp-tmux|
+  2. Installation ............................ |blink-cmp-tmux-installation|
+  3. Configuration .......................... |blink-cmp-tmux-configuration|
+  4. Forgejo ................................... |blink-cmp-tmux-forgejo|
+  5. Health ..................................... |blink-cmp-tmux-health|
+
+==============================================================================
+INTRODUCTION                                                  *blink-cmp-tmux*
+
+blink-cmp-tmux provides tmux command completions for blink.cmp. It completes
+tmux commands with usage signatures, alias information, and man page
+descriptions.
+
+==============================================================================
+INSTALLATION                                     *blink-cmp-tmux-installation*
+
+With vim.pack (Neovim 0.12+): >lua
+    vim.pack.add({
+      'https://git.barrettruth.com/barrettruth/blink-cmp-tmux',
+    })
+< With luarocks: >sh
+    luarocks install blink-cmp-tmux
+<
+
+==============================================================================
+CONFIGURATION                                   *blink-cmp-tmux-configuration*
+
+Register the source with blink.cmp: >lua
+    require('blink.cmp').setup({
+      sources = {
+        default = { 'tmux' },
+        providers = {
+          tmux = {
+            name = 'Tmux',
+            module = 'blink-cmp-tmux',
+          },
+        },
+      },
+    })
+<
+
+==============================================================================
+FORGEJO                                               *blink-cmp-tmux-forgejo*
+
+Due to GitHub's historic unreliability, development, issues, and pull requests
+have moved to: >
+    https://git.barrettruth.com/barrettruth/blink-cmp-tmux
+<
+Use Forgejo for documentation, issues, pull requests, and active development.
+
+==============================================================================
+HEALTH                                                 *blink-cmp-tmux-health*
+
+Run: >vim
+    :checkhealth blink-cmp-tmux
+<
+
+vim:tw=78:ts=8:ft=help:norl:

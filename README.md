@@ -6,7 +6,8 @@ Tmux command completion source for
 > [!NOTE]
 > Due to GitHub's historic unreliability, development, issues, and pull requests
 > have moved to
-> [Forgejo](https://git.barrettruth.com/barrettruth/blink-cmp-tmux).
+> [Forgejo](https://git.barrettruth.com/barrettruth/blink-cmp-tmux). See
+> `:help blink-cmp-tmux-forgejo` for canonical project links.
 
 ![blink-cmp-tmux preview](https://github.com/user-attachments/assets/d7b0683b-6e00-4d75-a169-048bf4d80860)
 
