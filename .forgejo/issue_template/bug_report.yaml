@@ -9,7 +9,7 @@ body:
       options:
         - label:
             I have searched [existing
-            issues](https://github.com/barrettruth/blink-cmp-tmux/issues)
+            issues](https://git.barrettruth.com/barrettruth/blink-cmp-tmux/issues)
           required: true
         - label: I have updated to the latest version
           required: true
@@ -58,25 +58,17 @@ body:
         Confirm the bug reproduces with this config before submitting.
       render: lua
       value: |
-        vim.env.LAZY_STDPATH = '.repro'
-        load(vim.fn.system('curl -s https://raw.githubusercontent.com/folke/lazy.nvim/main/bootstrap.lua'))()
-        require('lazy.nvim').setup({
-          spec = {
-            {
-              'saghen/blink.cmp',
-              dependencies = {
-                'barrettruth/blink-cmp-tmux',
-              },
-              opts = {
-                sources = {
-                  default = { 'tmux' },
-                  providers = {
-                    tmux = {
-                      name = 'Tmux',
-                      module = 'blink-cmp-tmux',
-                    },
-                  },
-                },
+        vim.pack.add({
+          'https://github.com/saghen/blink.cmp',
+          'https://git.barrettruth.com/barrettruth/blink-cmp-tmux',
+        })
+        require('blink.cmp').setup({
+          sources = {
+            default = { 'tmux' },
+            providers = {
+              tmux = {
+                name = 'Tmux',
+                module = 'blink-cmp-tmux',
               },
             },
           },

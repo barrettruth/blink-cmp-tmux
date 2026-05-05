@@ -9,7 +9,7 @@ body:
       options:
         - label:
             I have searched [existing
-            issues](https://github.com/barrettruth/blink-cmp-tmux/issues)
+            issues](https://git.barrettruth.com/barrettruth/blink-cmp-tmux/issues)
           required: true
 
   - type: textarea
