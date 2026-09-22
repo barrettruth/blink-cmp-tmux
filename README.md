@@ -3,10 +3,6 @@
 Tmux command completion source for
 [blink.cmp](https://github.com/saghen/blink.cmp).
 
-> [!NOTE]
-> Active development is hosted on
-> [Forgejo](https://forge.barrettruth.com/barrettruth/blink-cmp-tmux).
-
 ![blink-cmp-tmux preview](assets/blink-cmp-tmux.webp)
 
 ## Features
