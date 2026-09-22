@@ -4,9 +4,8 @@ Tmux command completion source for
 [blink.cmp](https://github.com/saghen/blink.cmp).
 
 > [!NOTE]
-> Due to GitHub's historic unreliability, active development is hosted on
+> Development is hosted on
 > [Forgejo](https://forge.barrettruth.com/barrettruth/blink-cmp-tmux).
-> GitHub is maintained as a read-only mirror.
 > See `:help blink-cmp-tmux-forgejo` for canonical project links.
 
 ![blink-cmp-tmux preview](https://github.com/user-attachments/assets/d7b0683b-6e00-4d75-a169-048bf4d80860)
