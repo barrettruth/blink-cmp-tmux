@@ -31,12 +31,6 @@ vim.pack.add({
 })
 ```
 
-Or via [luarocks](https://luarocks.org/modules/barrettruth/blink-cmp-tmux):
-
-```
-luarocks install blink-cmp-tmux
-```
-
 Configure `blink.cmp`:
 
 ```lua

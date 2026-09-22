@@ -25,10 +25,6 @@ With vim.pack (Neovim 0.12+): >lua
     vim.pack.add({
       'https://forge.barrettruth.com/barrettruth/blink-cmp-tmux',
     })
-< With luarocks: >sh
-    luarocks install blink-cmp-tmux
-<
-
 ==============================================================================
 CONFIGURATION                                   *blink-cmp-tmux-configuration*
 
