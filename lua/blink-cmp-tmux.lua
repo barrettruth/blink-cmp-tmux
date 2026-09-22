@@ -8,6 +8,9 @@ local loading = false
 local pending = {}
 
 function M.new()
+  pcall(function()
+    require('blink-cmp-tmux.migration').warn_if_github_source()
+  end)
   return setmetatable({}, { __index = M })
 end
 

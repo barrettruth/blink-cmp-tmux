@@ -8,7 +8,7 @@ CONTENTS                                             *blink-cmp-tmux-contents*
   1. Introduction .................................... |blink-cmp-tmux|
   2. Installation ............................ |blink-cmp-tmux-installation|
   3. Configuration .......................... |blink-cmp-tmux-configuration|
-  4. Forgejo ................................... |blink-cmp-tmux-forgejo|
+  4. Migration ................................ |blink-cmp-tmux-migration|
   5. Health ..................................... |blink-cmp-tmux-health|
 
 ==============================================================================
@@ -47,12 +47,14 @@ Register the source with blink.cmp: >lua
 <
 
 ==============================================================================
-FORGEJO                                               *blink-cmp-tmux-forgejo*
+MIGRATION                                           *blink-cmp-tmux-migration*
 
-Development, issues, and pull requests are on Forgejo: >
-    https://forge.barrettruth.com/barrettruth/blink-cmp-tmux
+blink-cmp-tmux will be removed from GitHub on October 31, 2026. Update your
+plugin source to Forgejo: >lua
+    vim.pack.add({
+      'https://forge.barrettruth.com/barrettruth/blink-cmp-tmux',
+    })
 <
-Use Forgejo for documentation, issues, pull requests, and active development.
 
 ==============================================================================
 HEALTH                                                 *blink-cmp-tmux-health*
