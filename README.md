@@ -3,7 +3,7 @@
 Tmux command completion source for
 [blink.cmp](https://github.com/saghen/blink.cmp).
 
-![blink-cmp-tmux preview](assets/blink-cmp-tmux.webp)
+![blink-cmp-tmux preview](https://forge.barrettruth.com/attachments/c9f21e59-5ee2-4fcb-bf41-b6cd461e7017)
 
 ## Features
 
